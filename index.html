@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="styles.css" />
+  <title>Mi lista de tareas</title>
+</head>
+<body>
+  <header>
+  <h1>📋✨ Mi lista de tareas ✨📋</h1>
+  <h2>Organiza tu día de manera eficiente</h2>
+  </header>
+  <nav class="nav__container">
+    <div class="btn-opciones">
+      <button id="ir-tareas"> <a href="#categorias" >👇🏻</a></button>
+      <button class="theme__mode" id="night-mode">🌚</button>
+    </div>
+  </nav>
+  <div>
+  </div>
+  <div class="container">
+    <!-- Sección de tareas existentes -->
+    <div class="tasks__container" >
+      <h3>✨ Tareas ✨</h3>
+    </div>
+    <!-- Agregar nueva tarea -->
+    <div class="add-tasks__container">
+      <h4>✨ Agregar Nueva Tarea ✨</h4>
+      <label class="form-label">Descripción de la tarea</label>
+      <textarea 
+        id="task-input" 
+        placeholder="Escribe tu tarea aquí..." 
+        required></textarea>
+      <div class="category-select">
+        <label for="categoria">Categoría:</label>
+        <select id="categoria">
+          <option value="trabajo">Trabajo</option>
+          <option value="educacion">Educación</option>
+          <option value="hogar">Hogar</option>
+          <option value="salud">Salud</option>
+          <option value="personal">Personal</option>
+          <option value="otro">Otro</option>
+        </select>
+      </div>
+      <button id="btn__add-task">➕ Agregar tarea</button>
+    </div>
+
+    <!-- Configuración -->
+    <div class="configuration__container">
+      <h5>⚙️ Configuración</h5>
+      
+      <div class="stats-section">
+        <h6>📊 Estadísticas</h6>
+        <ul class="stats-list">
+          <li><strong>Total:</strong> <span id="total-tasks"></span></li>
+          <li><strong>Completadas:</strong> <span id="completed-tasks"></span></li>
+          <li><strong>Pendientes:</strong> <span id="pending-tasks"></span></li>
+        </ul>
+      </div>
+      
+      <div class="actions-section">
+        <h6>🔧 Acciones</h6>
+        <button class="delete-completes">✅ Limpiar Completadas</button>
+        <button class="delete-all">🗑️ Limpiar Todo</button>
+      </div>
+    </div>
+
+    <!-- Categorías -->
+    <div class="category__container" id="categorias">
+      <h6>📚 Categorías 📚</h6>
+      <div class="category-buttons">
+        <button class="category-btn active" data-category="todas">
+          Todas <span id="cc-todas" class="badge">0</span>
+        </button>
+        <button class="category-btn" data-category="trabajo">
+          Trabajo <span id="cc-trabajo" class="badge">0</span>
+        </button>
+        <button class="category-btn" data-category="educacion">
+          Educación <span id="cc-educacion" class="badge">0</span>
+        </button>
+        <button class="category-btn" data-category="hogar">
+          Hogar <span id="cc-hogar" class="badge">0</span>
+        </button>
+        <button class="category-btn" data-category="salud">
+          Salud <span id="cc-salud" class="badge">0</span>
+        </button>
+        <button class="category-btn" data-category="personal">
+          Personal <span id="cc-personal" class="badge">0</span>
+        </button>
+        <button class="category-btn" data-category="otro">
+          Otro <span id="cc-otro" class="badge">0</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div>
+  <button id="ir-categorias">
+    <a href="#ir-tareas">👆🏻</a>
+  </button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
